@@ -59,7 +59,7 @@ export class GridApiComponent {
     this.gridApi.exportDataAsCsv();
   }
 
-  onGridReady({ api }) {
+  onGridReady({ api }: { api: GridApi }) {
     // get reference to the Grid API
     this.gridApi = api;
 

@@ -5,7 +5,7 @@ import { products } from '../../../../../data/data.json';
 
 @Component({
   templateUrl: './column-api.component.html',
-  styleUrls: ['./column-api.component.scss']
+  styleUrls: ['./column-api.component.scss'],
 })
 export class ColumnApiComponent {
   /**
@@ -27,22 +27,22 @@ export class ColumnApiComponent {
       headerName: 'Name',
       field: 'name',
       sortable: true,
-      filter: true
+      filter: true,
     },
     {
       colId: 'price',
       headerName: 'Price',
       field: 'price',
       sortable: true,
-      filter: 'agNumberColumnFilter'
+      filter: 'agNumberColumnFilter',
     },
     { headerName: 'Color', field: 'color', filter: true },
     {
       colId: 'details',
       headerName: 'Details',
       field: 'details',
-      filter: 'agTextColumnFilter'
-    }
+      filter: 'agTextColumnFilter',
+    },
   ];
 
   /**
@@ -53,14 +53,14 @@ export class ColumnApiComponent {
       name,
       price: Number(price),
       color,
-      details
+      details,
     })
   );
 
   /** The ag-Grid Column API. */
   private columnApi: ColumnApi;
 
-  onGridReady({ columnApi }) {
+  onGridReady({ columnApi }: { columnApi: ColumnApi }) {
     this.columnApi = columnApi;
   }
 
